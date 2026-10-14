@@ -1,14 +1,18 @@
 # FrameWalk
 
-An app designed to help you learn photography and never run out of things to photograph, All while taking relaxing walks through your community.
+An app designed to help you learn photography and never run out of things to photograph, all while taking relaxing walks through your community.
 
 ## Layout
 
-'''bash
+```bash
+
 FrameWalk/
+
 ├── LICENSE
+
 └── README.md
-'''
+
+```
 
 ## Goals
 
