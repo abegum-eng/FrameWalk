@@ -1,13 +1,24 @@
+// Creates a class to manage photography prompts.
 class PromptGenerator {
-  final Map<String, List<String>> promptsByStop;
 
-  PromptGenerator(this.promptsByStop);
+  // Stores a list of photography prompts for each location.
+  final Map<String, List<String>> prompts;
 
+  // Constructor: receives the prompts when the object is created.
+  PromptGenerator(this.prompts);
+
+  // Gets the photography prompts for a selected location.
   List<String> getPrompts(String stopId) {
-    if (stopId.trim().isEmpty) {
+
+    // Checks whether the location ID is empty.
+    if (stopId.isEmpty) {
+
+      // Shows an error if no location ID was provided.
       throw ArgumentError('Stop ID cannot be empty');
     }
 
-    return List.unmodifiable(promptsByStop[stopId] ?? <String>[]);
+    // Returns prompts for the location.
+    // If the location doesn't exist, returns an empty list.
+    return prompts[stopId] ?? [];
   }
 }
